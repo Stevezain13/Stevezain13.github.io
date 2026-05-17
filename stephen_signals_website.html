@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stephen Forex Signals | Professional Trading Signals</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #f0b429;
+    --gold-dim: #c8940f;
+    --dark: #080c10;
+    --dark2: #0e1419;
+    --dark3: #151d25;
+    --green: #00d68f;
+    --red: #ff4d6d;
+    --text: #c8d8e8;
+    --text-dim: #6b8099;
+    --border: rgba(240,180,41,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── BACKGROUND ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(240,180,41,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 80%, rgba(0,214,143,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── GRID OVERLAY ── */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(240,180,41,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(240,180,41,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background: rgba(8,12,16,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+
+  .nav-logo span { color: var(--text); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--dark) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600 !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(240,180,41,0.1);
+    border: 1px solid rgba(240,180,41,0.3);
+    color: var(--gold);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .pulse {
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    animation: fadeDown 0.8s 0.1s ease both;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero p {
+    max-width: 560px;
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    animation: fadeDown 0.8s 0.2s ease both;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeDown 0.8s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: #ffc832;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(240,180,41,0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: 1px solid var(--border);
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ── LIVE TICKER ── */
+  .ticker-wrap {
+    position: relative;
+    z-index: 1;
+    background: var(--dark2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    padding: 0.8rem 0;
+  }
+
+  .ticker {
+    display: flex;
+    gap: 3rem;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  .ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+  }
+
+  .ticker-pair {
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .ticker-up { color: var(--green); }
+  .ticker-down { color: var(--red); }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── STATS ── */
+  .stats {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat-item {
+    background: var(--dark);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  .stat-item:hover { background: var(--dark2); }
+
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .stat-label {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 3px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    color: var(--text-dim);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 550px;
+    margin-bottom: 3rem;
+  }
+
+  /* ── PAIRS GRID ── */
+  .pairs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .pair-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pair-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pair-card:hover {
+    border-color: rgba(240,180,41,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .pair-card:hover::before { opacity: 1; }
+
+  .pair-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+  }
+
+  .pair-desc {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .pair-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0,214,143,0.1);
+    color: var(--green);
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* ── FEATURES ── */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .feature-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(240,180,41,0.3);
+    background: var(--dark3);
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-desc {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* ── SIGNAL EXAMPLE ── */
+  .signal-demo {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 2rem auto 0;
+    position: relative;
+  }
+
+  .signal-demo::before {
+    content: 'LIVE SIGNAL EXAMPLE';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .signal-buy { color: var(--green); font-weight: 600; }
+  .signal-label { color: var(--gold); }
+  .signal-value { color: var(--text); }
+  .signal-dim { color: var(--text-dim); }
+
+  /* ── PRICING ── */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .price-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .price-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(240,180,41,0.05), var(--dark2));
+  }
+
+  .price-card.featured::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--dark);
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .price-plan {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+
+  .price-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .price-period {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .price-features li {
+    padding: 0.5rem 0;
+    color: var(--text);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .price-features li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), var(--gold), var(--border), transparent);
+  }
+
+  .step {
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .step-number {
+    width: 4rem;
+    height: 4rem;
+    background: var(--dark2);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin: 0 auto 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-title {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .step-desc {
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  /* ── CONTACT / SUBSCRIBE ── */
+  .subscribe-box {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .subscribe-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .subscribe-box h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subscribe-box p {
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .form-group {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-input {
+    flex: 1;
+    background: var(--dark);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.9rem 1.2rem;
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .form-input:focus { border-color: var(--gold); }
+
+  .form-input::placeholder { color: var(--text-dim); }
+
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+  }
+
+  .contact-link:hover { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative;
+    z-index: 1;
+    background: var(--dark2);
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-text {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+  }
+
+  .footer-bottom {
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0 2rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .pairs-grid { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .steps::before { display: none; }
+    .form-group { flex-direction: column; }
+  }
+
+  @media (max-width: 480px) {
+    .pairs-grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">STEPHEN<span>FX</span></div>
+  <ul class="nav-links">
+    <li><a href="#pairs">Pairs</a></li>
+    <li><a href="#features">Strategy</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#subscribe" class="nav-cta">Get Signals</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">
+    <div class="pulse"></div>
+    Live Signals — Bot Active 24/7
+  </div>
+  <h1>Professional<span>Forex Signals</span></h1>
+  <p>AI-powered Smart Money Concepts signals delivered directly to your Telegram. 6 currency pairs. Real-time alerts. No guesswork.</p>
+  <div class="hero-btns">
+    <a href="#subscribe" class="btn-primary">Get Free Trial</a>
+    <a href="#how" class="btn-outline">How It Works</a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"><span class="ticker-pair">EURUSD</span><span class="ticker-up">▲ +0.23%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">GBPUSD</span><span class="ticker-down">▼ -0.15%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">USDJPY</span><span class="ticker-up">▲ +0.41%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">XAUUSD</span><span class="ticker-up">▲ +0.88%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">AUDUSD</span><span class="ticker-down">▼ -0.09%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">USDCAD</span><span class="ticker-up">▲ +0.17%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">EURUSD</span><span class="ticker-up">▲ +0.23%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">GBPUSD</span><span class="ticker-down">▼ -0.15%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">USDJPY</span><span class="ticker-up">▲ +0.41%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">XAUUSD</span><span class="ticker-up">▲ +0.88%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">AUDUSD</span><span class="ticker-down">▼ -0.09%</span></div>
+    <div class="ticker-item"><span class="ticker-pair">USDCAD</span><span class="ticker-up">▲ +0.17%</span></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-number">6</div>
+    <div class="stat-label">Currency Pairs</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">15</div>
+    <div class="stat-label">Signal Checks</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">24/7</div>
+    <div class="stat-label">Bot Running</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">9+</div>
+    <div class="stat-label">Min Score /15</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PAIRS -->
+<section id="pairs">
+  <div class="section-label">Markets We Cover</div>
+  <h2 class="section-title">6 Premium Pairs</h2>
+  <p class="section-sub">We monitor the most liquid and profitable currency pairs around the clock — only sending signals when conditions are perfect.</p>
+
+  <div class="pairs-grid">
+    <div class="pair-card">
+      <div class="pair-name">EURUSD</div>
+      <div class="pair-desc">Euro / US Dollar — Most traded pair</div>
+      <div class="pair-status"><div class="pulse"></div> Active</div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-name">GBPUSD</div>
+      <div class="pair-desc">British Pound / US Dollar</div>
+      <div class="pair-status"><div class="pulse"></div> Active</div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-name">USDJPY</div>
+      <div class="pair-desc">US Dollar / Japanese Yen</div>
+      <div class="pair-status"><div class="pulse"></div> Active</div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-name">XAUUSD</div>
+      <div class="pair-desc">Gold / US Dollar — Highest moves</div>
+      <div class="pair-status"><div class="pulse"></div> Active</div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-name">AUDUSD</div>
+      <div class="pair-desc">Australian Dollar / US Dollar</div>
+      <div class="pair-status"><div class="pulse"></div> Active</div>
+    </div>
+    <div class="pair-card">
+      <div class="pair-name">USDCAD</div>
+      <div class="pair-desc">US Dollar / Canadian Dollar</div>
+      <div class="pair-status"><div class="pulse"></div> Active</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-label">Our Strategy</div>
+  <h2 class="section-title">Smart Money<br>Concepts + AI</h2>
+  <p class="section-sub">Every signal is backed by 15+ confluence checks using professional Smart Money Concepts combined with technical analysis.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🧠</div>
+      <div class="feature-title">SMC Analysis</div>
+      <div class="feature-desc">Order Blocks, Break of Structure, Fair Value Gaps, Liquidity Sweeps — the same tools used by institutional traders.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Technical Indicators</div>
+      <div class="feature-desc">EMA 20/50/200, RSI, ADX, Fibonacci levels, Candlestick patterns and Volume analysis all combined.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <div class="feature-title">News Protection</div>
+      <div class="feature-desc">Bot automatically avoids high-impact news events like NFP, CPI, FOMC to protect your trades.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⏰</div>
+      <div class="feature-title">Killzone Filter</div>
+      <div class="feature-desc">Signals only sent during London (10am-1pm EAT) and New York (4pm-7pm EAT) Killzones for maximum accuracy.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <div class="feature-title">Score System</div>
+      <div class="feature-desc">Every signal scored out of 15. Minimum score of 9/15 required. Only the highest quality setups are sent.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <div class="feature-title">Instant Telegram</div>
+      <div class="feature-desc">Signals delivered instantly to your Telegram with Entry, Stop Loss, TP1, TP2 and full analysis included.</div>
+    </div>
+  </div>
+
+  <!-- Signal Example -->
+  <div class="signal-demo">
+    <div><span class="signal-buy">BUY SIGNAL — EURUSD</span></div>
+    <div><span class="signal-label">Score: </span><span class="signal-value">11/15</span></div>
+    <div><span class="signal-label">Daily Bias: </span><span class="signal-value">BULLISH</span></div>
+    <div><span class="signal-label">Zone: </span><span class="signal-value">DISCOUNT (38%)</span></div>
+    <div>---</div>
+    <div><span class="signal-label">Entry:  </span><span class="signal-value">1.08520</span></div>
+    <div><span class="signal-label">SL:     </span><span class="signal-value">1.08190 (33 pips)</span></div>
+    <div><span class="signal-label">TP1:    </span><span class="signal-value">1.08850 (33 pips)</span></div>
+    <div><span class="signal-label">TP2:    </span><span class="signal-value">1.09180 (66 pips)</span></div>
+    <div><span class="signal-label">R:R = </span><span class="signal-value">1:2</span></div>
+    <div>---</div>
+    <div><span class="signal-dim">SMC: BOS BULLISH | OB Detected</span></div>
+    <div><span class="signal-dim">Session: London Killzone</span></div>
+    <div><span class="signal-dim">News: ✅ Clear</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">Process</div>
+  <h2 class="section-title">How It Works</h2>
+  <p class="section-sub">Getting started takes less than 2 minutes. Signals delivered straight to your phone.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-title">Subscribe</div>
+      <div class="step-desc">Choose your plan and send us a message on Telegram to get started.</div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-title">Join Group</div>
+      <div class="step-desc">Get added to our private Telegram signals group immediately.</div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-title">Get Signals</div>
+      <div class="step-desc">Receive real-time signals with entry, SL and TP directly on your phone.</div>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-title">Place Trade</div>
+      <div class="step-desc">Open your MT5 app and place the trade. Bot monitors markets for you.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Plans</div>
+  <h2 class="section-title">Simple Pricing</h2>
+  <p class="section-sub">Transparent pricing with no hidden fees. Cancel anytime.</p>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-plan">Starter</div>
+      <div class="price-amount">$25</div>
+      <div class="price-period">per month</div>
+      <ul class="price-features">
+        <li>3 Currency Pairs</li>
+        <li>Telegram Signals</li>
+        <li>Entry, SL & TP</li>
+        <li>Daily Report</li>
+        <li>Basic Support</li>
+      </ul>
+      <a href="#subscribe" class="btn-outline" style="display:block;text-align:center;">Get Started</a>
+    </div>
+
+    <div class="price-card featured">
+      <div class="price-plan">Professional</div>
+      <div class="price-amount">$49</div>
+      <div class="price-period">per month</div>
+      <ul class="price-features">
+        <li>All 6 Currency Pairs</li>
+        <li>Telegram Signals</li>
+        <li>Full SMC Analysis</li>
+        <li>Signal Score Shown</li>
+        <li>Daily Performance Report</li>
+        <li>Priority Support</li>
+      </ul>
+      <a href="#subscribe" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
+    </div>
+
+    <div class="price-card">
+      <div class="price-plan">VIP</div>
+      <div class="price-amount">$99</div>
+      <div class="price-period">per month</div>
+      <ul class="price-features">
+        <li>All 6 Currency Pairs</li>
+        <li>1-on-1 Support</li>
+        <li>Trade Reviews</li>
+        <li>SMC Education</li>
+        <li>Risk Management Help</li>
+        <li>Direct Chat Access</li>
+      </ul>
+      <a href="#subscribe" class="btn-outline" style="display:block;text-align:center;">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SUBSCRIBE -->
+<section id="subscribe">
+  <div class="subscribe-box">
+    <h3>Start Getting Signals</h3>
+    <p>Join traders already receiving our premium signals. Get your first week free.</p>
+
+    <div class="form-group">
+      <input type="text" class="form-input" placeholder="Your Name">
+      <input type="email" class="form-input" placeholder="Your Email">
+    </div>
+    <a href="https://t.me/StephenkForexBot_bot" class="btn-primary" style="display:block;width:100%;text-align:center;padding:1rem;">
+      Contact Us On Telegram →
+    </a>
+
+    <div class="contact-links">
+      <a href="https://t.me/StephenkForexBot_bot" class="contact-link">📱 Telegram Bot</a>
+      <a href="#" class="contact-link">📧 Email Us</a>
+      <a href="#" class="contact-link">📊 TradingView</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">STEPHEN FX</div>
+  <p class="footer-text">Professional Forex signals powered by Smart Money Concepts and AI analysis. Signals delivered 24/7 directly to your Telegram.</p>
+  <p class="footer-text" style="font-size:0.75rem; color:#3d5266;">
+    ⚠️ Risk Warning: Forex trading involves significant risk of loss and is not suitable for all investors. Past performance is not indicative of future results. Never trade money you cannot afford to lose.
+  </p>
+  <div class="footer-bottom">
+    © 2026 Stephen Kariuki — All Rights Reserved | Professional Forex Signals
+  </div>
+</footer>
+
+</body>
+</html>
